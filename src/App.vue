@@ -49,6 +49,15 @@ const filteredTasks = computed(() => {
   return showOnlyIncomplete.value
     ? tasks.value.filter((task) => !task.done)
     : tasks.value;
-});
+}); 
+function addTask() {
+  if (newTask.value.trim() === '') return;
+  tasks.value.push({ text: newTask.value, done: false });
+  newTask.value = '';
+}
+
+function removeTask(index) {
+  tasks.value.splice(index, 1);
+}
 
 </script>
