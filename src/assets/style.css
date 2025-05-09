@@ -25,6 +25,12 @@
   border-radius: 5px;
 }
 
+.input-task:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px #4CAF50;
+}
+
 .btn-add {
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -32,6 +38,10 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #45a049;
 }
 
 .filter-container {
@@ -64,6 +74,7 @@
 
 .task-text {
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 .btn-delete {
