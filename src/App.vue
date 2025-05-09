@@ -45,5 +45,10 @@ const tasks = ref([
   { text: 'Berburu', done: true }, 
   { text: 'Melestarikan Budaya Lokal', done: true }
 ]);
+const filteredTasks = computed(() => {
+  return showOnlyIncomplete.value
+    ? tasks.value.filter((task) => !task.done)
+    : tasks.value;
+});
 
 </script>
