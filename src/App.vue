@@ -34,4 +34,16 @@
 </template>
 
 <script setup>
+import { ref, computed } from 'vue';
+
+const newTask = ref('');
+const showOnlyIncomplete = ref(false);
+const tasks = ref([
+  { text: 'Beribadah', done: false },
+  { text: 'Belajar', done: false },
+  { text: 'Berpetualang', done: true },
+  { text: 'Berburu', done: true }, 
+  { text: 'Melestarikan Budaya Lokal', done: true }
+]);
+
 </script>
